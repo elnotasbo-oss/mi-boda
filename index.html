@@ -7,10 +7,25 @@
 <body>
     <h1>¡Nos Casamos!</h1>
     <br>
-<audio controls autoplay loop>
-  <source src="fondo-1.mp3" type="audio/mpeg">
-  Tu navegador no soporta el elemento de audio.
+<audio id="musicaFondo" loop>
+  <source src="TU_ARCHIVO_DE_MUSICA.mp3" type="audio/mpeg">
 </audio>
+
+<script>
+  // Configuración de volumen y reproducción
+  var audio = document.getElementById("musicaFondo");
+  audio.volume = 0.2; // Volumen al 20%
+
+  // Intenta reproducir al cargar, si el navegador lo permite
+  window.onload = function() {
+    audio.play();
+  };
+
+  // Truco: al hacer cualquier clic en la página, empieza a sonar
+  document.body.addEventListener('click', function() {
+    audio.play();
+  }, { once: true });
+</script>
     <img src="concrete-surface-background.jpg" alt="Imagen de Boda">
 </body>
 </html>
