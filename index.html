@@ -5,31 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Boda: Maria de los Angeles y Alex</title>
     <style>
-        body { 
-            margin: 0; padding: 0; 
+        /* Eliminamos cualquier margen predeterminado del navegador */
+        html, body { 
+            margin: 0; 
+            padding: 0; 
+            width: 100%; 
+            height: 100%;
             background: url('fondo-estatico.jpg') no-repeat center center fixed; 
             background-size: cover; 
             font-family: 'Georgia', serif;
-            display: flex; flex-direction: column; align-items: center;
         }
-        /* Contenedores de borde a borde */
-        .seccion { width: 100%; display: block; }
         
-        /* Imágenes: ancho total, altura proporcional (sin deformar) */
+        /* Contenedor que fuerza el borde a borde */
+        .seccion { 
+            width: 100vw; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+        }
+        
+        /* Imágenes: ancho total y altura proporcional */
         img { 
-            width: 100%; 
+            width: 100vw; 
             height: auto; 
             display: block; 
-            object-fit: contain; 
         }
         
-        /* Botón de sonido más pequeño y abajo a la derecha */
+        /* Botón de sonido abajo a la izquierda */
         #btnAudio {
-            position: fixed; bottom: 20px; right: 20px;
+            position: fixed; 
+            bottom: 20px; 
+            left: 20px;
             background: rgba(255, 255, 255, 0.6);
-            border: 1px solid #5a4a42; border-radius: 50%; 
-            width: 40px; height: 40px;
-            cursor: pointer; font-size: 16px; z-index: 1000;
+            border: 1px solid #5a4a42; 
+            border-radius: 50%; 
+            width: 40px; 
+            height: 40px;
+            cursor: pointer; 
+            font-size: 16px; 
+            z-index: 1000;
         }
     </style>
 </head>
@@ -60,7 +74,6 @@
             }
         };
 
-        // Activación automática al primer clic
         document.body.addEventListener('click', function() {
             if (audio.paused) {
                 audio.play();
