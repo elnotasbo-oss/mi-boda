@@ -17,6 +17,17 @@
 
         html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow-x: hidden; }
         
+        /* Capa de destellos (flota sobre todo) */
+        .destellos {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            background: url('destellos.png');
+            pointer-events: none; /* Permite hacer clic a través de la capa */
+            z-index: 1500; /* Entre el sobre y el contenido */
+            opacity: 0.6;
+        }
+        
         #invitacion { 
             background: url('fondo-estatico.jpg') no-repeat center center fixed; 
             background-size: cover; 
@@ -53,6 +64,7 @@
 </head>
 <body oncontextmenu="return false;">
 
+    <div class="destellos"></div>
     <div id="sobre"></div>
 
     <div id="invitacion">
