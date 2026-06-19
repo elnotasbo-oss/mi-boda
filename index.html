@@ -77,7 +77,7 @@
     </div>
 
     <div id="invitacion">
-        <div class="seccion"><img src="imagen1.png" alt="Sección 1"></div>
+        <div class="seccion"><img src="imagen-1.png" alt="Sección 1"></div>
         
         <!-- Reloj movido debajo de imagen1.png -->
         <div class="reloj-container" id="cuenta-regresiva">
@@ -105,7 +105,7 @@
     <script>
         window.onload = function() { document.body.style.opacity = '1'; };
 
-        const fechaDestino = new Date("Nov 28, 2026 00:00:00").getTime();
+        const fechaDestino = new Date("Nov 28, 2026 13:00:00").getTime();  // (linea de tiempo)
         const x = setInterval(function() {
             const ahora = new Date().getTime();
             const distancia = fechaDestino - ahora;
