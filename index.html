@@ -51,13 +51,28 @@
         .seccion { width: 100vw; }
         img { width: 100vw; height: auto; display: block; }
         
-        #btnAudio {
+       #btnAudio {
             position: fixed; bottom: 20px; left: 20px;
-            background: rgba(255, 255, 255, 0.1); /* Transparencia 20% */
-            border: 1px solid #5a4a42; border-radius: 50%; 
-            width: 35px; height: 35px;
-            cursor: pointer; font-size: 16px; z-index: 1000;
+            /* Eliminamos el background rgba y usamos background sólido con opacidad global */
+            background: #ffffff; 
+            border: 1px solid #5a4a42; 
+            border-radius: 50%; 
+            width: 40px; height: 40px;
+            cursor: pointer; 
+            font-size: 20px; 
+            z-index: 1000;
             display: flex; align-items: center; justify-content: center;
+            
+            /* Esta línea controla la transparencia de TODO el botón (icono, borde y fondo) */
+            opacity: 0.1; 
+            
+            /* Opcional: Esto hace que al pasar el mouse o tocarlo, se vea más claro */
+            transition: opacity 0.3s ease;
+        }
+
+        /* Efecto para que se vea normal al tocarlo */
+        #btnAudio:active {
+            opacity: 1;
         }
     </style>
 </head>
