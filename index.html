@@ -5,8 +5,18 @@
     <meta name="theme-color" content="#d9b6ad">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Boda: Maria de los Angeles y Alex</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <meta property="og:title" content="Boda: Maria de los Angeles y Alex">
+    <meta property="og:description" content="¡Te invitamos a celebrar nuestra boda!">
+    <meta property="og:image" content="https://giorno-speciale.github.io/Angeles-y-Alex/preview.jpg">
+    <meta property="og:type" content="website">
+
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <style>
+        /* ... (tus estilos igual que antes) ... */
         body { opacity: 0; transition: opacity 0.5s ease; font-family: 'Book Antiqua', 'Georgia', serif; color: #705E5E; margin: 0; padding: 0; }
         html, body { width: 100%; height: 100%; overflow-x: hidden; }
         #invitacion { background: url('fondo-estatico.jpg') no-repeat center center fixed; background-size: cover; min-height: 100vh; display: flex; flex-direction: column; align-items: center; }
@@ -18,7 +28,6 @@
         
         @keyframes pulso { 0% { transform: scale(1); } 50% { transform: scale(1.015); } 100% { transform: scale(1); } }
         
-        /* EFECTO LATIDO PARA BOTONES */
         @keyframes latido { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
         .boton-ubicacion { animation: latido 2s infinite ease-in-out; }
         
@@ -27,7 +36,6 @@
 
         .seccion { width: 100vw; }
         img { width: 100vw; height: auto; display: block; }
-
         #btnAudio { position: fixed; bottom: 20px; left: 20px; width: 45px; height: 45px; cursor: pointer; z-index: 1000; opacity: 0.6; }
     </style>
 </head>
