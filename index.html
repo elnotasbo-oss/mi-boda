@@ -18,13 +18,16 @@
         
         @keyframes pulso { 0% { transform: scale(1); } 50% { transform: scale(1.015); } 100% { transform: scale(1); } }
         
+        /* EFECTO LATIDO PARA BOTONES */
+        @keyframes latido { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+        .boton-ubicacion { animation: latido 2s infinite ease-in-out; }
+        
         #contenedor-sobre { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 2000; transition: opacity 1s ease; background-color: #fff; }
         #sobre { width: 100%; height: 100%; background: url('sobre-cerrado.png') no-repeat center center; background-size: cover; cursor: pointer; animation: pulso 5s infinite ease-in-out; }
 
         .seccion { width: 100vw; }
         img { width: 100vw; height: auto; display: block; }
 
-        /* Contenedor Animación Música */
         #btnAudio { position: fixed; bottom: 20px; left: 20px; width: 45px; height: 45px; cursor: pointer; z-index: 1000; opacity: 0.6; }
     </style>
 </head>
@@ -57,11 +60,12 @@
         <div style="display: flex; justify-content: center; margin: 20px 0;">
             <lottie-player src="Wedding.json" background="transparent" speed="1" style="width: 85px; height: 85px;" loop autoplay></lottie-player>
         </div>
-        <div style="background-color: rgba(255, 255, 255, 0.5); padding: 15px 0; margin: 20px 0; width: 100%; backdrop-filter: blur(5px);">
-            <h3 style="text-align: center; color: #705E5E; margin: 0 0 10px 0; font-family: 'Book Antiqua', serif; font-size: 10px; text-transform: uppercase; letter-spacing: 1px;">Toca para ver la ubicación</h3>
-            <div style="display: flex; justify-content: center; gap: 20px;">
-                <a href="https://www.google.com/maps/place/Kil%C3%B3metro+0/@-16.4902709,-68.1437046,15.45z/data=!4m6!3m5!1s0x915f216340eecefd:0xac064cdee44eb6ab!8m2!3d-16.4959631!4d-68.1334156!16s%2Fg%2F11krs1sbsc?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" style="text-decoration: none; color: #705E5E; border: 1px solid #705E5E; padding: 6px 12px; border-radius: 8px; font-weight: bold; font-size: 14px; text-align: center; min-width: 80px;">⛪<br><span style="font-size: 9px;">CATEDRAL</span></a>
-                <a href="https://www.google.com/maps/place/Sal%C3%B3n+de+Eventos+Green+Garden/@-16.4933943,-68.1992053,17z/data=!4m6!3m5!1s0x915edf006203fa57:0xc5ba724a5c0100b1!8m2!3d-16.4933573!4d-68.1969656!16s%2Fg%2F11x2wx2pqt?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" style="text-decoration: none; color: #705E5E; border: 1px solid #705E5E; padding: 6px 12px; border-radius: 8px; font-weight: bold; font-size: 14px; text-align: center; min-width: 80px;">🥂<br><span style="font-size: 9px;">SALÓN</span></a>
+        
+        <div style="background-color: rgba(255, 255, 255, 0.5); padding: 25px 0; margin: 20px 0; width: 100%; backdrop-filter: blur(5px);">
+            <h3 style="text-align: center; color: #705E5E; margin: 0 0 15px 0; font-family: 'Book Antiqua', serif; font-size: 10px; text-transform: uppercase; letter-spacing: 1px;">Toca para ver la ubicación</h3>
+            <div style="display: flex; justify-content: center; gap: 30px;">
+                <a href="https://www.google.com/maps/place/Kil%C3%B3metro+0/@-16.4902709,-68.1437046,15.45z/data=!4m6!3m5!1s0x915f216340eecefd:0xac064cdee44eb6ab!8m2!3d-16.4959631!4d-68.1334156!16s%2Fg%2F11krs1sbsc?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="boton-ubicacion" style="text-decoration: none; color: #705E5E; border: 1px solid #705E5E; padding: 6px 12px; border-radius: 8px; font-weight: bold; font-size: 14px; text-align: center; min-width: 80px;">⛪<br><span style="font-size: 9px;">CATEDRAL</span></a>
+                <a href="https://www.google.com/maps/place/Sal%C3%B3n+de+Eventos+Green+Garden/@-16.4933943,-68.1992053,17z/data=!4m6!3m5!1s0x915edf006203fa57:0xc5ba724a5c0100b1!8m2!3d-16.4933573!4d-68.1969656!16s%2Fg%2F11x2wx2pqt?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="boton-ubicacion" style="text-decoration: none; color: #705E5E; border: 1px solid #705E5E; padding: 6px 12px; border-radius: 8px; font-weight: bold; font-size: 14px; text-align: center; min-width: 80px;">🥂<br><span style="font-size: 9px;">SALÓN</span></a>
             </div>
         </div>
     </div>
